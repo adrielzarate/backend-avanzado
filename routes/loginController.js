@@ -44,18 +44,23 @@ class LoginController {
 
         // Compobar usuario encontrado y verificar la clave del usuario
         if(!user || !await bcrypt.compare(password, user.password)) {
-            res.json({success: false, error: 'Wrong credentials'});
+            res.json({success: false, error: 'Credenciales incorrectas'});
             return;
         }
 
         // el usuario esta y cnincide la password
-        jwt.sign({
-                    _id: user._id
-                 }, process.env.JWT_SECRET, { expiresIn: 120 }, (err, token) => {
+        jwt.sign({_id: user._id}, process.env.JWT_SECRET, {
+            expiresIn: 10
+        }, (err, token) => {
 
             if(err) {
-                const err = new Error('No se incluto ningun token');
+                const err = new Error('No se incluyo ningun token?');
                 err.status = 401;
+                next(err);
+                return;
+            }
+
+            if(err) {
                 next(err);
                 return;
             }
@@ -75,18 +80,6 @@ class LoginController {
             }
 
         });
-
-        jwt.verify({_id: user._id}, process.env.JWT_SECRET, {
-          if (err) {
-            err = {
-                message: 'jwt expired',
-            }
-            err.status = 401;
-            next(err);
-            return;
-          }
-        });
-
     }
 
     // POST show API from index
