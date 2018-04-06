@@ -50,11 +50,11 @@ class LoginController {
 
         // el usuario esta y cnincide la password
         jwt.sign({_id: user._id}, process.env.JWT_SECRET, {
-            expiresIn: 10
+            expiresIn: 60
         }, (err, token) => {
 
             if(err) {
-                const err = new Error('No se incluyo ningun token?');
+                const err = new Error('No se incluyo ningun token');
                 err.status = 401;
                 next(err);
                 return;
@@ -65,7 +65,7 @@ class LoginController {
                 return;
             }
 
-            if( req.url == '/' ) {
+            if( req.body.home == 'home' ) {
                 res.redirect(url.format({
                    pathname:'/',
                    query: {
