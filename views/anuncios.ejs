@@ -1,15 +1,10 @@
 <% include _header %>
 
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header"><a href="/" class="navbar-brand">Nodeapi</a></div>
-  </div>
-</div>
-
 <div class="container">
+
   <div class="row">
     <div class="col-md-12">
-      <h1>Lista de anuncios</h1>
+      <h1>Anuncios</h1>
       <p class="lead">Listando: <%= anuncios.length %> de <%= total %></p>
     </div>
   </div>
@@ -26,7 +21,7 @@
           <th>#</th>
         </tr></thead>
         <tbody>
-<% anuncios.forEach(anuncio => { %>
+          <% anuncios.forEach(anuncio => { %>
           <tr>
             <td><%= anuncio.nombre %></td>
             <td><%= anuncio.venta ? 'Si' : 'No' %></td>
@@ -35,7 +30,7 @@
             <td><%= anuncio.tags %></td>
             <td><%= anuncio._id %></td>
           </tr>
-<% }) %>
+          <% }) %>
         </tbody>
       </table>
 
@@ -55,4 +50,5 @@
   <a href="/">Volver a la home</a>
 
 </div>
+
 <% include _footer %>

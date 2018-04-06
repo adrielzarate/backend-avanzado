@@ -11,19 +11,44 @@
   <nav class="navbar navbar-inverse">
       <div class="container-fluid">
           <div class="navbar-header">
+
               <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+
               <a href="/" class="navbar-brand">Nodeapi</a>
+
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
               <ul class="nav navbar-nav navbar-right">
                   <li><a href="/anuncios">Anuncios</a></li>
-                  <li><a class="logout" href="/logout">Logout</a></li>
+                  <li><a href="/signin">SignIn</a></li>
               </ul>
           </div>
       </div>
   </nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Login</h1>
+      <form method="post">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input class="form-control" id="email" type="email" name="email" value="<%= email %>" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        <div class="error"><%= errors %></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% include _footer %>

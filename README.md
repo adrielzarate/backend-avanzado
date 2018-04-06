@@ -8,10 +8,10 @@ Api for the iOS/Android apps.
 ## Deploy
 
 ### Install dependencies
-    
+
     npm install
 
-### Configure  
+### Configure
 
 Review lib/connectMongoose.js to set database configuration
 
@@ -22,7 +22,7 @@ Review lib/connectMongoose.js to set database configuration
 ## Start
 
 To start a single instance:
-    
+
     npm start
 
 To start in development mode:
@@ -43,7 +43,7 @@ To start in development mode:
 ### Base Path
 
 The API can be used with the path:
-[API V1](/apiv1/anuncios)
+[API V1](/api/anuncios)
 
 ### Error example
 
@@ -70,7 +70,7 @@ nombre: {string} filter names beginning with the string
 
 Input query example: ?start=0&limit=2&sort=precio&includeTotal=true&tag=mobile&venta=true&precio=-90&nombre=bi
 
-**Result:** 
+**Result:**
 
     {
       "ok": true,
@@ -98,7 +98,7 @@ Input query example: ?start=0&limit=2&sort=precio&includeTotal=true&tag=mobile&v
 
 Return the list of available tags for the resource anuncios.
 
-**Result:** 
+**Result:**
 
     {
       "ok": true,

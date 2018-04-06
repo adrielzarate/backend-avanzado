@@ -2,10 +2,12 @@
 
 const router = require('express').Router();
 const fs = require('fs');
+const sessionAuth = require('../lib/sessionAuth');
 const Anuncio = require('mongoose').model('Anuncio');
 
 /* GET anuncios page. */
-router.get('/', async function (req, res, next) {
+router.get('/', sessionAuth(), async function (req, res, next) {
+
   try {
     const start = parseInt(req.query.start) || 0;
     const limit = parseInt(req.query.limit) || 1000; // nuestro api devuelve max 1000 registros

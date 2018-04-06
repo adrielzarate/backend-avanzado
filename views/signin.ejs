@@ -1,0 +1,27 @@
+<% include _header %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Signin</h1>
+      <p class="error"><%= errors %></p>
+      <form method="post">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input class="form-control" id="name" type="text" name="name" placeholder="Nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input class="form-control" id="email" type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="form-control" id="password" type="password" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% include _footer %>
