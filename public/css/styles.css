@@ -13,3 +13,14 @@ table tr td img {
 .navbar {
     border-radius: 0;
 }
+
+.lang-form {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.text-white {
+    display: inline-block;
+    margin-right: 5px;
+    color: #fff;
+}

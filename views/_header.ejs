@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title><%= title %></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/css/styles.css' />
   </head>
   <body>
 
@@ -17,12 +17,23 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="/" class="navbar-brand">Nodeapi</a>
+              <a href="/" class="navbar-brand"><%= __('Inicio') %></a>
+
+              <span class="text-white"><%= __('Idioma') %></span>
+
+              <form class="lang-form" method="get">
+                <select class="form-control">
+                  <% getLocales().forEach( lang => { %>
+                  <option <% if(lang == currentLang) { %> selected="selected" <% } %> ><%= lang %></option>
+                  <% }); %>
+                </select>
+              </form>
+
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="/anuncios">Anuncios</a></li>
-                  <li><a class="logout" href="/logout">Logout</a></li>
+                  <li><a href="/anuncios"><%= __('Anuncios') %></a></li>
+                  <li><a class="logout" href="/logout"><%= __('Salir') %></a></li>
               </ul>
           </div>
       </div>

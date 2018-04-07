@@ -3,29 +3,26 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Home</h1>
-
-            <br>
 
             <% if( token == '' ) { %>
 
-                <p>Ingresa tu password para generar el API token</p>
+                <p><%= __('Ingresa tu password para generar el API token') %></p>
                 <form class="form-inline" method="post" action="/api/authenticate">
                     <div class="form-group">
                         <input type="hidden" name="email" value="<%= email %>">
                         <input type="hidden" name="home" value="home">
                         <input type="password" class="form-control" name="password" id="password" required>
                     </div>
-                    <button type="submit" class="btn btn-default">Generar</button>
+                    <button type="submit" class="btn btn-default"><%= __('Generar') %></button>
                 </form>
 
             <% } else { %>
 
-                <div class="token"><p>Tu token es</p> <pre><%= token %></pre></div>
+                <div class="token"><p><%= __('Tu token es') %></p> <pre><%= token %></pre></div>
 
                 <form class="form-inline" method="get" action="/api/anuncios">
                     <input type="hidden" name="token" value="<%= token %>">
-                    <button type="submit" class="btn btn-link">Ver API con token</button>
+                    <button type="submit" class="btn btn-link"><%= __('Ver API con token') %></button>
                 </form>
 
             <% } %>

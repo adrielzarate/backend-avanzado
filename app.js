@@ -31,6 +31,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const i18n = require('./lib/i18nConfigure')();
+app.use(i18n.init);
+
 // Global Template variables
 app.locals.title = 'NodePop';
 
@@ -38,7 +41,6 @@ const loginController = require('./routes/loginController');
 
 // API v1
 app.use('/api/anuncios', jwtAuth(), require('./routes/api/anuncios'));
-
 app.use('/api/authenticate', loginController.postLoginJWT);
 app.use('/api/anuncios', loginController.postJWTAPI);
 
@@ -55,6 +57,7 @@ app.use(session({
 }));
 
 app.use(async (req, res, next) => {
+    app.locals.currentLang = req.cookies['nodeapi-lang'];
     try {
         req.user = req.session.authUser ? await Usuario.findById(req.session.authUser._id) : null;
         next();
@@ -73,6 +76,8 @@ app.use('/', require('./routes/index'));
 app.use('/anuncios', require('./routes/anuncios'));
 app.use('/login', require('./routes/login'));
 app.use('/signin', require('./routes/signin'));
+
+app.use('/lang',  require('./routes/lang'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
