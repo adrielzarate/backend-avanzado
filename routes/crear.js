@@ -3,8 +3,9 @@
 const express = require('express');
 const router = express.Router();
 const Anuncio = require('../models/Anuncio');
-
 const multer = require('multer');
+const cote = require('cote');
+const requester = new cote.Requester({ name: 'thumbnail generator client' });
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -26,6 +27,15 @@ router.post('/', upload.single('foto-file'), (req, res, next) => {
     data.foto = req.file.filename;
     data.tags = req.body.tags.split(',');
     const anuncio = new Anuncio(data);
+
+    requester.send({
+        type: 'generateThumbnail',
+        name: data.foto,
+        routeOrig: 'public/images/anuncios/',
+        routeDest: 'public/images/anuncios/thumbnails/'
+    }, res => {
+        console.log(`thumbnail ${res}`);
+    });
 
     anuncio.save((err) => {
         if(err) {
