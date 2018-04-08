@@ -2,6 +2,6 @@
 
 module.exports = {
   anuncios: {
-    imagesURLBasePath: '/images/anuncios/'
+    imagesURLBasePath: '/images/anuncios/thumbnails/'
   }
 };
