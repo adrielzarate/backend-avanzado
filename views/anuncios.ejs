@@ -47,6 +47,61 @@
     </div>
   </div>
 
+  <hr>
+
+  <div class="row" style="margin-bottom: 100px;">
+    <div class="col-xs-4">
+
+        <h2><%= __('Crear') %></h2>
+
+        <br>
+
+        <form action="/crear" enctype="multipart/form-data" method="post">
+
+          <div class="form-group">
+            <label for="nombre"><%= __('Nombre') %></label>
+            <input class="form-control" type="text" name="nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for=""><%= __('Venta') %>
+              <input type="radio" name="venta" value="true" checked> <%= __('Si') %>
+              <input type="radio" name="venta" value="false"> <%= __('No') %>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="precio"><%= __('Precio') %></label>
+            <input class="form-control" type="number" name="precio" required>
+          </div>
+
+          <div class="form-group">
+            <label for="foto"><%= __('Foto') %></label>
+            <input name="foto-file" type="file" required>
+            <input name="foto" type="hidden">
+          </div>
+
+          <div class="form-group">
+            <label for="nombre"><%= __('Etiquetas') %></label>
+            <div class="row">
+              <div class="col-xs-6">
+                <input class="form-control" id="tagInput" type="text" name="tag">
+              </div>
+              <div class="col-xs-6">
+                <button class="btn btn-default" id="addTagBtn"><%= __('Agregar etiqueta') %></button>
+              </div>
+            </div>
+            <br>
+            <input class="form-control" id="tagsInput" type="text" name="tags" placeholder="<%= __('Las etiquetas que agregues apareceran aqui') %>" required>
+          </div>
+
+          <button type="submit" class="btn btn-default"><%= __('Crear') %></button>
+
+        </form>
+
+    </div>
+  </div>
+
 </div>
 
 <% include _footer %>

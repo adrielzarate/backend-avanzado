@@ -22,6 +22,16 @@
 	"Tu token es": "Tu token es",
 	"Ver API con token": "Ver API con token",
 	"Generar": "Generar",
-	"Ingresa tu password para generar el API token": "Ingresa tu password para generar el API token",
-	"Idioma": "Idioma"
+	"Ingresa tu contraseña para generar el API token": "Ingresa tu contraseña para generar el API token",
+	"Idioma": "Idioma",
+	"Registrarse": "Registrarse",
+	"Correo": "Correo",
+	"Contraseña": "Contraseña",
+	"Enviar": "Enviar",
+	"Ingresar": "Ingresar",
+	"Si": "Si",
+	"No": "No",
+	"Agregar etiqueta": "Agregar etiqueta",
+	"Crear": "Crear",
+	"Las etiquetas que agregues apareceran aqui": "Las etiquetas que agregues apareceran aqui"
 }

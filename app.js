@@ -43,6 +43,7 @@ const loginController = require('./routes/loginController');
 app.use('/api/anuncios', jwtAuth(), require('./routes/api/anuncios'));
 app.use('/api/authenticate', loginController.postLoginJWT);
 app.use('/api/anuncios', loginController.postJWTAPI);
+app.use('/crear', require('./routes/crear'));
 
 app.use(session({
     name: 'nodeapi-session',

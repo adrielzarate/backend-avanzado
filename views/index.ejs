@@ -6,7 +6,7 @@
 
             <% if( token == '' ) { %>
 
-                <p><%= __('Ingresa tu password para generar el API token') %></p>
+                <p><%= __('Ingresa tu contraseña para generar el API token') %></p>
                 <form class="form-inline" method="post" action="/api/authenticate">
                     <div class="form-group">
                         <input type="hidden" name="email" value="<%= email %>">

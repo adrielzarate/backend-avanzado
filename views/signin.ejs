@@ -1,24 +1,24 @@
-<% include _header %>
+<% include _header-not-logged %>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Signin</h1>
+      <h1><%= __('Registrarse') %></h1>
       <p class="error"><%= errors %></p>
       <form method="post">
         <div class="form-group">
-          <label for="name">Nombre</label>
+          <label for="name"><%= __('Nombre') %></label>
           <input class="form-control" id="name" type="text" name="name" placeholder="Nombre" required>
         </div>
         <div class="form-group">
-          <label for="email">Email address</label>
+          <label for="email"><%= __('Correo') %></label>
           <input class="form-control" id="email" type="email" name="email" placeholder="Email" required>
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password"><%= __('Contraseña') %></label>
           <input class="form-control" id="password" type="password" name="password" placeholder="Password" required>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default"><%= __('Enviar') %></button>
       </form>
     </div>
   </div>

@@ -1,50 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel='stylesheet' href='/css/styles.css' />
-  </head>
-  <body>
-
-  <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-          <div class="navbar-header">
-
-              <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a href="/" class="navbar-brand">Nodeapi</a>
-
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-              <ul class="nav navbar-nav navbar-right">
-                  <li><a href="/anuncios">Anuncios</a></li>
-                  <li><a href="/signin">SignIn</a></li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+<% include _header-not-logged %>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Login</h1>
+      <h1><%= __('Ingresar') %></h1>
       <form method="post">
         <div class="form-group">
-          <label for="email">Email address</label>
+          <label for="email"><%= __('Correo') %></label>
           <input class="form-control" id="email" type="email" name="email" value="<%= email %>" placeholder="Email">
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password"><%= __('Contraseña') %></label>
           <input type="password" name="password" class="form-control" id="password" placeholder="Password">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default"><%= __('Enviar') %></button>
         <div class="error"><%= errors %></div>
       </form>
     </div>

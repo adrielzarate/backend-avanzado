@@ -5,7 +5,7 @@
 	"generic": "There was an error: {{err}}",
 	"Inicio": "Home",
 	"Anuncios": "Advertisements",
-	"Salir": "logout",
+	"Salir": "Logout",
 	"Listado": "List",
 	"de": "of",
 	"Nombre": "Name",
@@ -22,6 +22,16 @@
 	"Tu token es": "Your token is",
 	"Ver API con token": "Show API with token",
 	"Generar": "Generate",
-	"Ingresa tu password para generar el API token": "Enter your password to generate the API token",
-	"Idioma": "Language"
+	"Ingresa tu contraseña para generar el API token": "Enter your password to generate the API token",
+	"Idioma": "Language",
+	"Registrarse": "Signin",
+	"Correo": "Email",
+	"Contraseña": "Password",
+	"Enviar": "Submit",
+	"Ingresar": "Login",
+	"Si": "Yes",
+	"No": "No",
+	"Agregar etiqueta": "Create tag",
+	"Crear": "Create",
+	"Las etiquetas que agregues apareceran aqui": "The tags you will add appear here"
 }
