@@ -50,7 +50,7 @@ class LoginController {
 
         // el usuario esta y cnincide la password
         jwt.sign({_id: user._id}, process.env.JWT_SECRET, {
-            expiresIn: 60
+            expiresIn: 1600
         }, (err, token) => {
 
             if(err) {
