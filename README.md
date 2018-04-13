@@ -51,3 +51,7 @@ Los tests programados son 4
 ```
     $ npm run e2e
 ```
+
+## Modulo de NPM: npmgram
+
+npmgram esta disponible [aqui](https://www.npmjs.com/package/npmgram)
