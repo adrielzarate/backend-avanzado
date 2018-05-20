@@ -3,7 +3,7 @@
 const conn = require('../lib/connectMongoose');
 const fs = require('fs');
 
-const Usuario = require('../models/usuario');
+const Usuario = require('../models/Usuario');
 const usuarios = JSON.parse(fs.readFileSync(__dirname + '/usuarios.json', 'utf-8'));
 
 const Anuncio = require('../models/Anuncio');

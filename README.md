@@ -1,5 +1,9 @@
-Nodeapi
+Nodepop
 =======
+
+## Practica DevOps
+[Ejercicio 1](http://ec2-18-217-102-39.us-east-2.compute.amazonaws.com/)
+[Ejercicio 2](http://18.217.102.39/)
 
 ## Deploy
 
@@ -25,7 +29,7 @@ Para activar la generacion de thumbnails asegurate de tener instalado [PM2](http
 
 ## Start
 
-Lanzamos Nodeapi
+Lanzamos Nodepop
 ```
     $ npm run dev
 ```
