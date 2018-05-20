@@ -19,7 +19,7 @@ En otra terminal levantamos mongod
 
 Para empezar con 2 anuncios y 3 usuarios precargados en la base de datos, hacemos (desde la terminal de la aplicacion)
 ```
-    $ npm run install_db
+    $ npm run installDB
 ```
 
 Para activar la generacion de thumbnails asegurate de tener instalado [PM2](http://pm2.keymetrics.io/) y correr el servicio
